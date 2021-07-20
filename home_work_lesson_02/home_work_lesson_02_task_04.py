@@ -6,7 +6,6 @@
 
 user_str = input('Строка: ')
 str_list = user_str.split()
-num = 0
-for s_str in str_list:
-    num += 1
-    print(f'{num} : {s_str[0:10]}')
+
+for ind, el in enumerate(str_list):
+    print(ind, el[0:10])
