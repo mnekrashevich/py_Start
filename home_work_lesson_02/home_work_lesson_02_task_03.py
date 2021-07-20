@@ -4,8 +4,6 @@
 # Сообщить, к какому времени года относится месяц (зима, весна, лето, осень).
 # Напишите решения через list и dict.
 
-# month_number = 0
-# while month_number not in range(1,12):
 try:
     month_number = int(input('Введите номер месяца: '))
     if month_number not in range(1,13):
