@@ -14,6 +14,7 @@ def division(divisible, divisor):
     Возвращаемое значение:
     Числовое значение типа float, Строка (в случае ошибки).
     """
+    global result
     try:
         divisible_float = float(divisible)
         divisor_float = float(divisor)
