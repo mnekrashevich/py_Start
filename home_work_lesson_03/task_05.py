@@ -8,3 +8,28 @@
 # Если специальный символ введен после нескольких чисел,
 # то вначале нужно добавить сумму этих чисел к полученной ранее сумме и после этого завершить программу.
 
+def str_to_sum(s):
+    """
+    Преобразует строку с список чисел до спецсимвола "*". Остальную часть строки игнорирует.
+    :param s: Строка
+    :return: Список чисел в строке, до спецсимсола "*".
+    """
+    list_of_num = []
+    end = bool(s.count('*'))
+    try:
+        list_of_num = [float(num) for num in s.split('*', 1)[0].strip().split(' ') if num != '']
+    except ValueError:
+        print('Ошибка ввода данных. Результат будет проигнорирован')
+        end = False
+    finally:
+        return sum(list_of_num), end
+
+
+result_sum = 0
+while True:
+    num_str = input(f'Ввдедите строку чисел. для завершения введите "*" :')
+    str_sum, end = str_to_sum(num_str)
+    result_sum += str_sum
+    print(f'Результат сложения числе: {result_sum}')
+    if end:
+        break
