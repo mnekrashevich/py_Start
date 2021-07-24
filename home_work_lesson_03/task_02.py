@@ -6,13 +6,13 @@
 # Реализовать вывод данных о пользователе одной строкой.
 
 def user_info(**kwargs):
-    '''
+    """
     Функция принимает именованные параметры и выводит их строкой.
     В ключах знак "_" заменяется пробелом; Первая буква ключа в верхнем регистре остальные в нижнем
     ...
     Пример:
     user_info(name = 'name', surname = 'surname') --> Name - name; Surname - surname
-    '''
+    """
     result = '; '.join([f'{key.replace("_"," ").capitalize()} - {value}' for key, value in kwargs.items()])
     print('; '.join([f'{key.replace("_"," ").capitalize()} - {value}' for key, value in kwargs.items()]))
     return result
