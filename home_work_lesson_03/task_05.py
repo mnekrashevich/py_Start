@@ -26,7 +26,7 @@ def str_to_sum(s):
 
 
 result_sum = 0
-while True:
+while True:         # Можно было бы прилепить сюда рекурсию, но как то она сюда не подходит.
     num_str = input(f'Ввдедите строку чисел. для завершения введите "*" :')
     str_sum, end = str_to_sum(num_str)
     result_sum += str_sum
