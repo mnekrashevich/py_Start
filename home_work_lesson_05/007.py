@@ -30,4 +30,4 @@ with open(filename, mode, encoding='utf-8') as file, open(result_name, mode_w, e
         total_n += 1 if profit >= 0 else 0
         my_dict[name] = profit
     my_list = [my_dict, {'average_profit': round(total/total_n if total_n else 0, 2)}]
-    json.dump(my_list, result)
+    json.dump(my_list, result, ensure_ascii=False)
